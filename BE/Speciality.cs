@@ -7,16 +7,19 @@ namespace BE
 {
     public class Speciality
     {
-        private static int _id;
+        private static int _sid;
+
+        private  int _id;
 
         public Speciality()
         {
-            _id++;
+            _sid++;
         }
 
         public Speciality(Enums.Discipline discp, string name,int minRate, int maxRate)
         {
-            _id++;
+            _sid++;
+            _id = _sid;
             Discipline = discp;
             Name = name;
             MinRate = minRate;

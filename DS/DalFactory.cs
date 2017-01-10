@@ -9,6 +9,7 @@ namespace DS
 {
     public sealed class DalFactory
     {
+        #region Singleton
         private static readonly DalFactory instance = new DalFactory();
 
         static DalFactory() { }
@@ -18,6 +19,7 @@ namespace DS
         {
             get { return instance; }
         }
+        #endregion
 
         public static IDAL getDAL(string typeDL)
             {

@@ -7,24 +7,45 @@ namespace BE
 {
     public class Contract
     {
+        private static int _sid;
+
+        private int _id;
+
+        #region Consturctors
+
         public Contract()
         {
-            throw new System.NotImplementedException();
+            _sid++;
         }
+
+        public Contract(Employer e, Worker w)
+        {
+            EmployerID = e.ID;
+            WorkerID = w.ID;
+        }
+        #endregion
 
         #region Properties
         public int ID
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
+                return _id;
             }
         }
+
+        public int EmployerID
+        {
+            get; set;
+        }
+
+        public string WorkerID
+        {
+            get; set;
+        }
         #endregion
+
+
 
         public void Method()
         {

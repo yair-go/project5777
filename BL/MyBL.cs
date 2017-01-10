@@ -58,6 +58,74 @@ namespace BL
         {
             throw new NotImplementedException();
         }
+
+        public List<Speciality> getSpecsList()
+        {
+            return MyDal.getSpecsList();
+        }
         #endregion
+
+        #region Worker
+
+        public void addWorker(Worker wo)
+        {
+            MyDal.addWorker(wo);
+        }
+
+        public void deleteWorker(Worker wo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void updateWorker(Worker wo, string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void updateWorker(Worker wo, Worker newWo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void updateWorker(Worker wo, int cost, string minmax)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Worker> getWorkersList()
+        {
+            return MyDal.getWorkersList();
+        }
+        #endregion
+
+        #region Employer
+
+        public void addEmployer(Employer emp)
+        {
+            MyDal.addEmployer(emp);
+        }
+
+        public void deleteEmployer(Employer emp)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void updateEmployer(Employer emp, string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void updateEmployer(Employer emp, Employer newemp)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void updateEmployer(Employer emp, int cost, string minmax)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+
     }
 }

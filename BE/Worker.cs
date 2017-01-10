@@ -7,7 +7,45 @@ namespace BE
 {
     public class Worker
     {
-        public int ID
+        private string _id;
+
+        #region Constuctors
+        public Worker() { }
+        public Worker(string id, string firstName, string lastName, DateTime birthday)
+        {
+            _id = id;
+            FirstName = firstName;
+            LastName = lastName;
+            Birthday = birthday;
+        }
+
+        #endregion
+
+        #region Properties
+        public string ID
+        {
+            get
+            {
+                return _id;
+            }
+        }
+
+        public string FirstName
+        {
+            get; set;  
+        }
+
+        public string LastName
+        {
+            get; set;
+        }
+
+        public DateTime Birthday
+        {
+            get;
+        }
+
+        public int Phone
         {
             get
             {
@@ -17,6 +55,13 @@ namespace BE
             set
             {
             }
+        }
+        #endregion
+
+        public override string ToString()
+        {
+            return FirstName + " " + LastName;
+
         }
     }
 }

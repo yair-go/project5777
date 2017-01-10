@@ -11,12 +11,21 @@ namespace BE
         {
             General,
             DB,
-            Community,
+            Communication,
             Crypto,
             ServerSide,
             ClientSide,
             Mobile,
-            UI
+            UI,
+            Programing
+        };
+
+        public enum Degree
+        {
+            DR,
+            MSc,
+            BSc,
+            Student
         };
     }
 }
