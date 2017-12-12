@@ -6,76 +6,85 @@
         xmlns:local="clr-namespace:PL"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Width="517">
-            <TabItem Header="Workers">
-                <Grid Background="#FFE5E5E5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="89*"/>
-                        <ColumnDefinition Width="7*"/>
-                        <ColumnDefinition Width="14*"/>
-                        <ColumnDefinition Width="97*"/>
-                        <ColumnDefinition Width="40*"/>
-                        <ColumnDefinition Width="264*"/>
-                    </Grid.ColumnDefinitions>
-                    <Label  Content="discipline :" HorizontalAlignment="Left" Margin="38,176,0,0" VerticalAlignment="Top" Height="26" Width="65" Grid.ColumnSpan="3"/>
-                    <Label  Content="First Name :" HorizontalAlignment="Left" Margin="38,59,0,0" VerticalAlignment="Top" Height="26" Width="72" Grid.ColumnSpan="3"/>
-                    <Label  Content="Birthday :" HorizontalAlignment="Left" Margin="38,117,0,0" VerticalAlignment="Top" Height="26" Width="68" Grid.ColumnSpan="3"/>
-                    <ComboBox x:Name="comboBoxWorkerDiscpline" ItemsSource="{Binding}" HorizontalAlignment="Left" Margin="29,180,0,0" VerticalAlignment="Top" Width="120" Grid.Column="3" Height="22" Grid.ColumnSpan="3"/>
-                    <TextBox x:Name="tBWorkerFirstName" HorizontalAlignment="Left" Height="23" Margin="29,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="3" Grid.ColumnSpan="3"/>
-                    <Button x:Name="addWorkerbutton" Content="Add Worker" Grid.Column="4" HorizontalAlignment="Left" Margin="0,227,0,0" VerticalAlignment="Top" Width="102" Click="addWorkerbutton_Click" Height="20" Grid.ColumnSpan="2"/>
-                    <Label  Content="Last Name :" HorizontalAlignment="Left" Margin="38,92,0,0" VerticalAlignment="Top" Height="26" Width="72" Grid.ColumnSpan="3"/>
-                    <TextBox x:Name="tBWorkerLastname" HorizontalAlignment="Left" Height="23" Margin="29,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="3" Grid.ColumnSpan="3"/>
-                    <Label  Content="Worker ID :" HorizontalAlignment="Left" Margin="38,32,0,0" VerticalAlignment="Top" Height="26" Width="65" Grid.ColumnSpan="3"/>
-                    <TextBox x:Name="tBWorkerID" HorizontalAlignment="Left" Height="23" Margin="29,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="3" Grid.ColumnSpan="3"/>
-                    <DatePicker x:Name="dpWorkerBirthday" Grid.Column="3" HorizontalAlignment="Left" Margin="29,126,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="120" DisplayDate="1980-01-01"/>
-                    <ListBox x:Name="lbWorkers" Grid.Column="5" HorizontalAlignment="Left" Height="227" Margin="71,32,0,0" VerticalAlignment="Top" Width="157" ItemsSource="{Binding}"/>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Employers">
-                <Grid Background="#FFE5E5E5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="212*"/>
-                        <ColumnDefinition Width="12*"/>
-                        <ColumnDefinition Width="287*"/>
-                    </Grid.ColumnDefinitions>
-                    <Label  Content="discipline :" HorizontalAlignment="Left" Margin="38,176,0,0" VerticalAlignment="Top" Height="26" Width="65"/>
-                    <Label  Content="Employer Name :" HorizontalAlignment="Left" Margin="38,59,0,0" VerticalAlignment="Top" Height="26" Width="107"/>
-                    <Label  Content="Max. Rate :" HorizontalAlignment="Left" Margin="38,117,0,0" VerticalAlignment="Top" Height="26" Width="68"/>
-                    <ComboBox x:Name="comboBoxEmployersDiscpline" ItemsSource="{Binding}" HorizontalAlignment="Left" Margin="150,180,0,0" VerticalAlignment="Top" Width="120" Height="22" Grid.ColumnSpan="3"/>
-                    <TextBox x:Name="tBEmployersName" HorizontalAlignment="Left" Height="23" Margin="150,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3"/>
-                    <TextBox x:Name="tBEmployersmaxRate" HorizontalAlignment="Left" Height="23" Margin="150,121,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3"/>
-                    <Button x:Name="addEmployersbutton" Content="Add Employer" HorizontalAlignment="Left" Margin="27,245,0,0" VerticalAlignment="Top" Width="102" Click="addEmployersbutton_Click" Height="20" Grid.Column="2"/>
-                    <Label  Content="Last Name :" HorizontalAlignment="Left" Margin="38,92,0,0" VerticalAlignment="Top" Height="26" Width="72"/>
-                    <TextBox x:Name="tBEmployersLastname" HorizontalAlignment="Left" Height="23" Margin="150,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3"/>
-                    <Label  Content="Employers ID :" HorizontalAlignment="Left" Margin="38,32,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
-                    <TextBox x:Name="tBEmployersID" HorizontalAlignment="Left" Height="23" Margin="150,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3"/>
-                </Grid>
+    <StackPanel>
 
-            </TabItem>
-            <TabItem Header="Contracts">
-                <Grid Background="#FFE5E5E5"/>
-            </TabItem>
-            <TabItem Header="Specialities">
-                <Grid Background="#FFE5E5E5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="88*"/>
-                        <ColumnDefinition Width="17*"/>
-                        <ColumnDefinition Width="406*"/>
-                    </Grid.ColumnDefinitions>
-                    <Label x:Name="label" Content="discipline :" HorizontalAlignment="Left" Margin="38,34,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-                    <Label x:Name="label_Copy" Content="Name :" HorizontalAlignment="Left" Margin="38,65,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="label_Copy1" Content="Min. Rate :" HorizontalAlignment="Left" Margin="38,91,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-                    <Label x:Name="label_Copy2" Content="Max. Rate :" HorizontalAlignment="Left" Margin="38,117,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
-                    <ComboBox x:Name="comboBoxDiscpline" ItemsSource="{Binding}" HorizontalAlignment="Left" Margin="12,38,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
-                    <TextBox x:Name="tBname" HorizontalAlignment="Left" Height="23" Margin="12,65,0,0" TextWrapping="Wrap" Text="SQL" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
-                    <TextBox x:Name="tBminRate" HorizontalAlignment="Left" Height="23" Margin="12,93,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
-                    <TextBox x:Name="tBmaxRate" HorizontalAlignment="Left" Height="23" Margin="12,121,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
-                    <Button x:Name="button" Content="Add Speciality" Grid.Column="2" HorizontalAlignment="Left" Margin="81,170,0,0" VerticalAlignment="Top" Width="102" Click="button_Click"/>
-                    <DataGrid x:Name="dgSpecialities" Grid.Column="2" HorizontalAlignment="Left" Height="233" Margin="208,24,0,0" VerticalAlignment="Top" Width="161" ItemsSource="{Binding}" />
-                </Grid>
-            </TabItem>
-        </TabControl>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="21" Margin="0,0,0,0" VerticalAlignment="Top" Width="517">
+            <MenuItem Header="File"/>
+            <MenuItem Header="Setting"/>
+        </Menu>
 
-    </Grid>
+        <Grid>
+
+            <TabControl x:Name="tabControl" HorizontalAlignment="Left" Width="517">
+                <TabItem Header="Workers">
+                    <Grid Background="#FFE5E5E5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="89*"/>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="14*"/>
+                            <ColumnDefinition Width="97*"/>
+                            <ColumnDefinition Width="40*"/>
+                            <ColumnDefinition Width="264*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label  Content="discipline :" HorizontalAlignment="Left" Margin="38,176,0,0" VerticalAlignment="Top" Height="26" Width="65" Grid.ColumnSpan="3"/>
+                        <Label  Content="First Name :" HorizontalAlignment="Left" Margin="38,59,0,0" VerticalAlignment="Top" Height="26" Width="72" Grid.ColumnSpan="3"/>
+                        <Label  Content="Birthday :" HorizontalAlignment="Left" Margin="38,117,0,0" VerticalAlignment="Top" Height="26" Width="68" Grid.ColumnSpan="3"/>
+                        <ComboBox x:Name="comboBoxWorkerDiscpline" ItemsSource="{Binding}" HorizontalAlignment="Left" Margin="29,180,0,0" VerticalAlignment="Top" Width="120" Grid.Column="3" Height="22" Grid.ColumnSpan="3"/>
+                        <TextBox x:Name="tBWorkerFirstName" HorizontalAlignment="Left" Height="23" Margin="29,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="3" Grid.ColumnSpan="3"/>
+                        <Button x:Name="addWorkerbutton" Content="Add Worker" Grid.Column="4" HorizontalAlignment="Left" Margin="0,227,0,0" VerticalAlignment="Top" Width="102" Click="addWorkerbutton_Click" Height="20" Grid.ColumnSpan="2"/>
+                        <Label  Content="Last Name :" HorizontalAlignment="Left" Margin="38,92,0,0" VerticalAlignment="Top" Height="26" Width="72" Grid.ColumnSpan="3"/>
+                        <TextBox x:Name="tBWorkerLastname" HorizontalAlignment="Left" Height="23" Margin="29,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="3" Grid.ColumnSpan="3"/>
+                        <Label  Content="Worker ID :" HorizontalAlignment="Left" Margin="38,32,0,0" VerticalAlignment="Top" Height="26" Width="65" Grid.ColumnSpan="3"/>
+                        <TextBox x:Name="tBWorkerID" HorizontalAlignment="Left" Height="23" Margin="29,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="3" Grid.ColumnSpan="3"/>
+                        <DatePicker x:Name="dpWorkerBirthday" Grid.Column="3" HorizontalAlignment="Left" Margin="29,126,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="120" DisplayDate="1980-01-01"/>
+                        <ListBox x:Name="lbWorkers" Grid.Column="5" HorizontalAlignment="Left" Height="227" Margin="71,32,0,0" VerticalAlignment="Top" Width="157" ItemsSource="{Binding}"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Employers">
+                    <Grid Background="#FFE5E5E5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="212*"/>
+                            <ColumnDefinition Width="12*"/>
+                            <ColumnDefinition Width="287*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label  Content="discipline :" HorizontalAlignment="Left" Margin="38,176,0,0" VerticalAlignment="Top" Height="26" Width="65"/>
+                        <Label  Content="Employer Name :" HorizontalAlignment="Left" Margin="38,59,0,0" VerticalAlignment="Top" Height="26" Width="107"/>
+                        <Label  Content="Max. Rate :" HorizontalAlignment="Left" Margin="38,117,0,0" VerticalAlignment="Top" Height="26" Width="68"/>
+                        <ComboBox x:Name="comboBoxEmployersDiscpline" ItemsSource="{Binding}" HorizontalAlignment="Left" Margin="150,180,0,0" VerticalAlignment="Top" Width="120" Height="22" Grid.ColumnSpan="3"/>
+                        <TextBox x:Name="tBEmployersName" HorizontalAlignment="Left" Height="23" Margin="150,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3"/>
+                        <TextBox x:Name="tBEmployersmaxRate" HorizontalAlignment="Left" Height="23" Margin="150,121,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3"/>
+                        <Button x:Name="addEmployersbutton" Content="Add Employer" HorizontalAlignment="Left" Margin="27,245,0,0" VerticalAlignment="Top" Width="102" Click="addEmployersbutton_Click" Height="20" Grid.Column="2"/>
+                        <Label  Content="Last Name :" HorizontalAlignment="Left" Margin="38,92,0,0" VerticalAlignment="Top" Height="26" Width="72"/>
+                        <TextBox x:Name="tBEmployersLastname" HorizontalAlignment="Left" Height="23" Margin="150,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3"/>
+                        <Label  Content="Employers ID :" HorizontalAlignment="Left" Margin="38,32,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
+                        <TextBox x:Name="tBEmployersID" HorizontalAlignment="Left" Height="23" Margin="150,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3"/>
+                    </Grid>
+
+                </TabItem>
+                <TabItem Header="Contracts">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem Header="Specialities">
+                    <Grid Background="#FFE5E5E5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="88*"/>
+                            <ColumnDefinition Width="17*"/>
+                            <ColumnDefinition Width="406*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label x:Name="label" Content="discipline :" HorizontalAlignment="Left" Margin="38,34,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                        <Label x:Name="label_Copy" Content="Name :" HorizontalAlignment="Left" Margin="38,65,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="label_Copy1" Content="Min. Rate :" HorizontalAlignment="Left" Margin="38,91,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                        <Label x:Name="label_Copy2" Content="Max. Rate :" HorizontalAlignment="Left" Margin="38,117,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+                        <ComboBox x:Name="comboBoxDiscpline" ItemsSource="{Binding}" HorizontalAlignment="Left" Margin="12,38,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+                        <TextBox x:Name="tBname" HorizontalAlignment="Left" Height="23" Margin="12,65,0,0" TextWrapping="Wrap" Text="SQL" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+                        <TextBox x:Name="tBminRate" HorizontalAlignment="Left" Height="23" Margin="12,93,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+                        <TextBox x:Name="tBmaxRate" HorizontalAlignment="Left" Height="23" Margin="12,121,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+                        <Button x:Name="button" Content="Add Speciality" Grid.Column="2" HorizontalAlignment="Left" Margin="81,170,0,0" VerticalAlignment="Top" Width="102" Click="button_Click"/>
+                        <DataGrid x:Name="dgSpecialities" Grid.Column="2" HorizontalAlignment="Left" Height="233" Margin="208,24,0,0" VerticalAlignment="Top" Width="161" ItemsSource="{Binding}" />
+                    </Grid>
+                </TabItem>
+            </TabControl>
+
+        </Grid>
+    </StackPanel>
 </Window>

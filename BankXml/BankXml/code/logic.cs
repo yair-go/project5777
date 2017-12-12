@@ -44,7 +44,7 @@ namespace BankXml.code
         public static IEnumerable<ATM> GetAllAtm()
         {
             DownloadAtmXml();
-
+   
             //this work also white xmlServerPath
             XElement xml = XElement.Load(xmlLocalPath);
 

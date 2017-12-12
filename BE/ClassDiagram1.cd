@@ -1,41 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="BE.Speciality">
+  <Class Name="BE.Speciality" Collapsed="true">
     <Position X="3" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAMAgAAAAQBAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAEAMAgAAAAQBAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Speciality.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BE.Worker">
+  <Class Name="BE.Worker" Collapsed="true">
     <Position X="7" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAEAAAAAAgAAEAABAAAAAAAAIAAAAAAAAIAAAAAg=</HashCode>
       <FileName>Worker.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BE.Employer">
+  <Class Name="BE.Employer" Collapsed="true">
     <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgAAAAABAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Employer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BE.Contract">
+  <Class Name="BE.Contract" Collapsed="true">
     <Position X="1" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAEAAAgAAAAABgAIAEAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Contrat.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="System.Object">
-    <Position X="4.25" Y="3.5" Width="1.5" />
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="3.75" Y="2.5" Width="1.5" />
     <TypeIdentifier />
   </Class>
-  <Class Name="BE.Enums">
+  <Class Name="BE.Enums" Collapsed="true">
     <Position X="9" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
     <NestedTypes>
       <Enum Name="BE.Enums.Discipline" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Enums.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="BE.Enums.Degree" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>Enums.cs</NewMemberFileName>
         </TypeIdentifier>

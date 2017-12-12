@@ -70,7 +70,8 @@ namespace DS
 
         public void addWorker(Worker wo)
         {
-            DataSource.WorkersList.Add(wo);
+            if (!DataSource.WorkersList.Exists(w => w.ID == wo.ID))
+              DataSource.WorkersList.Add(wo);
         }
 
         public void deleteWorker(Worker wo)

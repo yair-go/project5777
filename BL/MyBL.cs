@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BE;
 using DAL;
 using DS;
+using System.Configuration;
 
 namespace BL
 {
@@ -27,7 +28,9 @@ namespace BL
         private MyBL() { }
         static MyBL()
         {
-            MyDal = DalFactory.getDAL("List");
+            string TypeDAL = ConfigurationSettings.AppSettings.Get("TypeDS");
+             // MyDal = DalFactory.getDAL("List");
+            MyDal = DalFactory.getDAL(TypeDAL);
         }
 
         #endregion

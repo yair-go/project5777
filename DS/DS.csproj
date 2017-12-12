@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="DalFactory.cs" />
     <Compile Include="Dal_List.cs" />
+    <Compile Include="Dal_SQL.cs" />
     <Compile Include="DataSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
